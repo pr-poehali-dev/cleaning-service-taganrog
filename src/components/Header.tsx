@@ -3,30 +3,30 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-sm border-b">
+    <header className="bg-white shadow-sm border-b sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2">
-            <Icon name="Sparkles" className="text-blue-500" size={24} />
-            <span className="text-xl font-bold text-gray-900">КлинСервис</span>
+          <div className="flex items-center space-x-3">
+            <Icon name="Sparkles" className="text-blue-500" size={28} />
+            <span className="text-2xl font-bold text-gray-900">ЧистоДом</span>
           </div>
 
           <nav className="hidden md:flex space-x-8">
             <a
               href="#services"
-              className="text-gray-600 hover:text-blue-500 transition-colors"
+              className="text-gray-600 hover:text-blue-500 transition-colors font-medium"
             >
               Услуги
             </a>
             <a
               href="#about"
-              className="text-gray-600 hover:text-blue-500 transition-colors"
+              className="text-gray-600 hover:text-blue-500 transition-colors font-medium"
             >
               О нас
             </a>
             <a
               href="#contact"
-              className="text-gray-600 hover:text-blue-500 transition-colors"
+              className="text-gray-600 hover:text-blue-500 transition-colors font-medium"
             >
               Контакты
             </a>

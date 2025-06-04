@@ -7,81 +7,89 @@ const Services = () => {
     {
       icon: "Home",
       title: "Уборка квартир",
-      description: "Генеральная и поддерживающая уборка квартир любой площади",
+      description:
+        "Генеральная и поддерживающая уборка квартир любой площади с использованием профессиональных средств",
       price: "от 2500 ₽",
-      features: ["Влажная уборка", "Мытье окон", "Уборка ванной", "Пылесос"],
+      features: [
+        "Влажная уборка всех поверхностей",
+        "Мытье окон и зеркал",
+        "Уборка ванной и санузла",
+        "Пылесос и мытье полов",
+      ],
     },
     {
       icon: "Building",
       title: "Уборка домов",
-      description: "Комплексная уборка частных домов и коттеджей",
+      description: "Комплексная уборка частных домов и коттеджей с территорией",
       price: "от 4000 ₽",
       features: [
-        "Уборка всех комнат",
-        "Мытье фасадов",
-        "Уборка участка",
-        "Дезинфекция",
+        "Уборка всех жилых комнат",
+        "Мытье фасадных окон",
+        "Уборка придомовой территории",
+        "Дезинфекция помещений",
       ],
     },
     {
       icon: "Sofa",
       title: "Химчистка мебели",
-      description: "Профессиональная химчистка диванов, кресел, ковров",
+      description:
+        "Профессиональная химчистка диванов, кресел, ковров и матрасов",
       price: "от 1500 ₽",
       features: [
-        "Удаление пятен",
+        "Удаление любых пятен",
         "Антибактериальная обработка",
-        "Сушка",
-        "Защита ткани",
+        "Быстрая сушка",
+        "Защитная пропитка ткани",
       ],
     },
     {
       icon: "Car",
-      title: "Мойка авто",
-      description: "Детейлинг и химчистка автомобилей",
+      title: "Мойка и химчистка авто",
+      description: "Детейлинг и профессиональная химчистка автомобилей",
       price: "от 2000 ₽",
       features: [
-        "Внешняя мойка",
+        "Внешняя мойка кузова",
         "Химчистка салона",
-        "Полировка",
+        "Полировка и воск",
         "Защитные покрытия",
       ],
     },
     {
       icon: "Briefcase",
       title: "Клининг офисов",
-      description: "Профессиональная уборка офисных помещений",
+      description: "Профессиональная уборка офисных и коммерческих помещений",
       price: "от 150 ₽/м²",
       features: [
-        "Ежедневная уборка",
+        "Ежедневная поддерживающая уборка",
         "Генеральная уборка",
-        "Мытье окон",
-        "Дезинфекция",
+        "Мытье панорамных окон",
+        "Дезинфекция рабочих мест",
       ],
     },
     {
       icon: "Droplets",
-      title: "После ремонта",
+      title: "Уборка после ремонта",
       description: "Уборка помещений после строительных и ремонтных работ",
       price: "от 300 ₽/м²",
       features: [
-        "Удаление пыли",
-        "Мытье поверхностей",
-        "Уборка мусора",
-        "Полировка",
+        "Удаление строительной пыли",
+        "Мытье всех поверхностей",
+        "Вывоз строительного мусора",
+        "Финальная полировка",
       ],
     },
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Наши услуги
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Полный спектр клининговых услуг в Таганроге с гарантией качества
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Полный спектр клининговых услуг в Таганроге с гарантией качества и
+            индивидуальным подходом
           </p>
         </div>
 
@@ -89,40 +97,42 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="hover:shadow-lg transition-shadow border-gray-200"
+              className="hover:shadow-xl transition-all duration-300 border-gray-200 group"
             >
               <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 p-3 bg-blue-100 rounded-full w-fit">
+                <div className="mx-auto mb-6 p-4 bg-blue-50 rounded-2xl w-fit group-hover:bg-blue-100 transition-colors">
                   <Icon
                     name={service.icon as any}
                     className="text-blue-500"
-                    size={24}
+                    size={32}
                   />
                 </div>
-                <CardTitle className="text-xl font-semibold text-gray-900">
+                <CardTitle className="text-xl font-bold text-gray-900 mb-3">
                   {service.title}
                 </CardTitle>
-                <p className="text-gray-600 mt-2">{service.description}</p>
-                <p className="text-2xl font-bold text-blue-500 mt-3">
+                <p className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
+                <p className="text-3xl font-bold text-blue-500 mt-4">
                   {service.price}
                 </p>
               </CardHeader>
 
               <CardContent className="pt-0">
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-3 mb-8">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600">
+                    <li key={idx} className="flex items-start text-gray-600">
                       <Icon
                         name="Check"
-                        className="text-green-500 mr-2"
+                        className="text-green-500 mr-3 mt-0.5 flex-shrink-0"
                         size={16}
                       />
-                      {feature}
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white">
+                <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3">
                   Заказать услугу
                 </Button>
               </CardContent>
